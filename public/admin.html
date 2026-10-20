@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin ArsipGo</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">📁 ArsipGo <span>Admin</span></div>
+    <button id="logoutBtn" class="button ghost" hidden>Keluar</button>
+  </header>
+  <main class="wrap">
+    <section id="loginPanel" class="login-panel">
+      <h1>Masuk Admin</h1>
+      <p>Gunakan akun yang sudah diberi role admin di database.</p>
+      <form id="loginForm">
+        <label>Email<input id="email" type="email" required autocomplete="username"></label>
+        <label>Password<input id="password" type="password" required autocomplete="current-password"></label>
+        <button class="button primary" type="submit">Masuk</button>
+        <p id="loginMessage" class="message" role="status"></p>
+      </form>
+    </section>
+
+    <section id="dashboardPanel" hidden>
+      <div class="heading">
+        <div><p class="eyebrow">PANEL PENGELOLAAN</p><h1>Dashboard Admin</h1><p>Kelola pesanan dan verifikasi pembayaran layanan kearsipan.</p></div>
+        <button id="refreshBtn" class="button ghost">Muat ulang</button>
+      </div>
+      <div id="summary" class="summary"></div>
+      <section class="panel">
+        <div class="filters">
+          <input id="searchInput" type="search" placeholder="Cari nama, email, atau nomor pesanan">
+          <select id="statusFilter">
+            <option value="">Semua status pesanan</option>
+            <option value="menunggu_konfirmasi">Menunggu konfirmasi</option>
+            <option value="dikonfirmasi">Dikonfirmasi</option>
+            <option value="diproses">Diproses</option>
+            <option value="selesai">Selesai</option>
+            <option value="dibatalkan">Dibatalkan</option>
+          </select>
+          <select id="paymentFilter">
+            <option value="">Semua status pembayaran</option>
+            <option value="menunggu_verifikasi">Menunggu verifikasi</option>
+            <option value="paid">Lunas</option>
+            <option value="unpaid">Belum dibayar</option>
+            <option value="ditolak">Ditolak</option>
+          </select>
+          <button id="filterBtn" class="button primary">Terapkan</button>
+        </div>
+        <p id="tableMessage" class="message" role="status"></p>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>Pesanan</th><th>Pelanggan</th><th>Layanan & detail</th><th>Tanggal mulai</th><th>Status</th><th>Pembayaran</th><th>Aksi</th></tr></thead>
+            <tbody id="bookingRows"><tr><td colspan="7">Silakan masuk sebagai admin.</td></tr></tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+  </main>
+  <script src="admin.js"></script>
+</body>
+</html>

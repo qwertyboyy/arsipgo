@@ -1,0 +1,25 @@
+:root{font-family:Inter,Segoe UI,Arial,sans-serif;color:#163b35;background:#f5f8f5;font-synthesis:none}*{box-sizing:border-box}body{margin:0}.topbar{height:72px;background:#fff;border-bottom:1px solid #dce7e1;display:flex;align-items:center;justify-content:space-between;padding:0 max(24px,calc((100vw - 1240px)/2))}.brand{font-size:22px;font-weight:800;color:#087660}.brand span{font-size:13px;background:#e5f4ec;padding:6px 10px;border-radius:20px;margin-left:8px}.wrap{max-width:1240px;margin:36px auto;padding:0 22px}.login-panel,.panel,.stat{background:#fff;border:1px solid #e0e9e3;border-radius:18px;box-shadow:0 10px 28px #173d3210}.login-panel{max-width:440px;margin:8vh auto;padding:30px}.login-panel h1,.heading h1{margin:0 0 8px}.login-panel p,.heading p{color:#6b7e78}.login-panel form{display:grid;gap:16px;margin-top:24px}label{display:grid;gap:7px;font-size:14px;font-weight:650}input,select{width:100%;padding:12px 13px;border:1px solid #cfddd5;border-radius:10px;font:inherit;color:#163b35;background:#fff}.button{border:0;border-radius:10px;padding:11px 16px;font:inherit;font-weight:700;cursor:pointer}.button.primary{background:#087660;color:white}.button.ghost{background:#e8f3ed;color:#087660}.button:disabled{opacity:.55;cursor:wait}.heading{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:22px}.eyebrow{font-size:12px;font-weight:800;letter-spacing:.12em;color:#087660!important}.summary{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;margin-bottom:22px}.stat{padding:18px}.stat span{display:block;color:#71817b;font-size:12px;line-height:1.5}.stat strong{display:block;font-size:28px;margin-top:8px}.panel{padding:20px}.filters{display:grid;grid-template-columns:1fr 240px auto;gap:10px;margin-bottom:10px}.message{color:#6b7e78;min-height:20px;font-size:14px}.table-scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;min-width:900px}th,td{text-align:left;padding:14px 12px;border-bottom:1px solid #e8eee9;vertical-align:top;font-size:13px}th{color:#61736c;font-size:12px;text-transform:uppercase;letter-spacing:.04em}td strong{display:block;margin-bottom:4px}td small{display:block;color:#73827d;line-height:1.6}.status-select{min-width:175px;padding:9px}.status-pill{display:inline-block;padding:5px 8px;border-radius:20px;background:#edf5ef;font-size:11px;font-weight:700}.empty{text-align:center;color:#71817b;padding:32px}@media(max-width:900px){.summary{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:600px){.wrap{margin:22px auto;padding:0 12px}.summary{grid-template-columns:repeat(2,minmax(0,1fr))}.filters{grid-template-columns:1fr}.heading{align-items:flex-start}.topbar{padding:0 16px}.login-panel{padding:22px}}
+
+.summary{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.stat-wide{grid-column:span 2}
+.filters{grid-template-columns:1fr 220px 220px auto}
+table{min-width:1050px}
+.pay-pill{display:inline-block;padding:5px 8px;border-radius:20px;font-size:11px;font-weight:700;margin-bottom:6px;background:#eef1ef;color:#5b6b66}
+.pay-paid{background:#dcf3e4;color:#0a6b3d}
+.pay-pending{background:#fff1d6;color:#9a5b00}
+.pay-unpaid{background:#eef1ef;color:#5b6b66}
+.pay-expired,.pay-cancelled,.pay-failed{background:#fde5e3;color:#b42318}
+.refund-warning{color:#b42318!important;font-weight:700}
+@media(max-width:900px){.filters{grid-template-columns:1fr 1fr}.filters input{grid-column:1/-1}}
+@media(max-width:600px){.filters{grid-template-columns:1fr}.stat-wide{grid-column:span 1}}
+
+.pay-menunggu_verifikasi{background:#e3edff;color:#1d4ed8}
+.pay-ditolak{background:#fde5e3;color:#b42318}
+.pay-actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.mini-btn{border:1px solid #cfddd5;background:#fff;color:#163b35;border-radius:8px;padding:6px 10px;font:inherit;font-size:12px;font-weight:700;cursor:pointer}
+.mini-btn:hover{background:#f1f7f3}
+.mini-btn.ok{background:#087660;border-color:#087660;color:#fff}
+.mini-btn.ok:hover{background:#06604e}
+.mini-btn.danger{background:#fff;border-color:#e6b4af;color:#b42318}
+.mini-btn.danger:hover{background:#fdf0ee}
+.stat-alert{border-color:#93b4f5;background:#f3f7ff}
